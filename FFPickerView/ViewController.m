@@ -32,7 +32,7 @@
 }
 
 - (void)didSelectOption:(id)option {
-	NSLog(@"test: %@", option);
+	NSLog(@"Option: %@", option);
 }
 
 @end
