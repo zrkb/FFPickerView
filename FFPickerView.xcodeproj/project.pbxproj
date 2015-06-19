@@ -14,6 +14,10 @@
 		DCC2252D1B332C2F00A95CFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC2252C1B332C2F00A95CFE /* Images.xcassets */; };
 		DCC225301B332C2F00A95CFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC2252E1B332C2F00A95CFE /* LaunchScreen.xib */; };
 		DCC2253C1B332C2F00A95CFE /* FFPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2253B1B332C2F00A95CFE /* FFPickerViewTests.m */; };
+		DCC225471B33481B00A95CFE /* FFPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225461B33481B00A95CFE /* FFPickerViewController.m */; };
+		DCC2254A1B33534C00A95CFE /* FFPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225491B33534C00A95CFE /* FFPicker.m */; };
+		DCC225521B34683000A95CFE /* FFPickerOption.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225511B34683000A95CFE /* FFPickerOption.m */; };
+		DCC225541B34A10300A95CFE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DCC225531B34A10300A95CFE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		DCC225351B332C2F00A95CFE /* FFPickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFPickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC2253A1B332C2F00A95CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC2253B1B332C2F00A95CFE /* FFPickerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPickerViewTests.m; sourceTree = "<group>"; };
+		DCC225451B33481B00A95CFE /* FFPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPickerViewController.h; sourceTree = "<group>"; };
+		DCC225461B33481B00A95CFE /* FFPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPickerViewController.m; sourceTree = "<group>"; };
+		DCC225481B33534C00A95CFE /* FFPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPicker.h; sourceTree = "<group>"; };
+		DCC225491B33534C00A95CFE /* FFPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPicker.m; sourceTree = "<group>"; };
+		DCC225501B34683000A95CFE /* FFPickerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPickerOption.h; sourceTree = "<group>"; };
+		DCC225511B34683000A95CFE /* FFPickerOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPickerOption.m; sourceTree = "<group>"; };
+		DCC225531B34A10300A95CFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 		DCC225131B332C2F00A95CFE = {
 			isa = PBXGroup;
 			children = (
+				DCC225531B34A10300A95CFE /* README.md */,
 				DCC2251E1B332C2F00A95CFE /* FFPickerView */,
 				DCC225381B332C2F00A95CFE /* FFPickerViewTests */,
 				DCC2251D1B332C2F00A95CFE /* Products */,
@@ -83,6 +95,12 @@
 			children = (
 				DCC225231B332C2F00A95CFE /* AppDelegate.h */,
 				DCC225241B332C2F00A95CFE /* AppDelegate.m */,
+				DCC225451B33481B00A95CFE /* FFPickerViewController.h */,
+				DCC225461B33481B00A95CFE /* FFPickerViewController.m */,
+				DCC225501B34683000A95CFE /* FFPickerOption.h */,
+				DCC225511B34683000A95CFE /* FFPickerOption.m */,
+				DCC225481B33534C00A95CFE /* FFPicker.h */,
+				DCC225491B33534C00A95CFE /* FFPicker.m */,
 				DCC225261B332C2F00A95CFE /* ViewController.h */,
 				DCC225271B332C2F00A95CFE /* ViewController.m */,
 				DCC225291B332C2F00A95CFE /* Main.storyboard */,
@@ -219,8 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC2254A1B33534C00A95CFE /* FFPicker.m in Sources */,
+				DCC225471B33481B00A95CFE /* FFPickerViewController.m in Sources */,
 				DCC225281B332C2F00A95CFE /* ViewController.m in Sources */,
+				DCC225541B34A10300A95CFE /* README.md in Sources */,
 				DCC225251B332C2F00A95CFE /* AppDelegate.m in Sources */,
+				DCC225521B34683000A95CFE /* FFPickerOption.m in Sources */,
 				DCC225221B332C2F00A95CFE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

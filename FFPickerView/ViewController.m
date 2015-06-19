@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "FFPicker.h"
 
-@interface ViewController ()
+@interface ViewController () <FFPickerDelegate>
+
+@property (nonatomic, strong) FFPicker *picker;
 
 @end
 
@@ -16,12 +19,20 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.picker = [[FFPicker alloc] initWithOptions:[NSArray arrayWithObjects:
+													 [FFPickerOption optionWithTitle:@"Foo" value:@"1"],
+													 [FFPickerOption optionWithTitle:@"Bar" value:@"2"],
+													 [FFPickerOption optionWithTitle:@"barz" value:@"3"], nil]];
+	self.picker.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+- (IBAction)showPicker:(id)sender {
+	[self.picker show];
+}
+
+- (void)didSelectOption:(id)option {
+	NSLog(@"test: %@", option);
 }
 
 @end
