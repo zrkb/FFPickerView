@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yY9-6K-OZm">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -46,6 +47,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUo-gE-0ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="424" y="306"/>
+        </scene>
+        <!--Country List Table View Controller-->
+        <scene sceneID="J4Z-4g-w34">
+            <objects>
+                <tableViewController storyboardIdentifier="CountryListTableViewController" id="41r-m5-MFp" customClass="CountryListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hs2-Y1-cX7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar" id="qt7-pA-CRM">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="41r-m5-MFp" id="bTu-bb-gLV"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" textLabel="uvt-qa-Ng7" rowHeight="50" style="IBUITableViewCellStyleDefault" id="1J9-TF-Uej">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1J9-TF-Uej" id="LPd-rB-Qdu">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uvt-qa-Ng7">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="41r-m5-MFp" id="jRB-jr-UBc"/>
+                            <outlet property="delegate" destination="41r-m5-MFp" id="hdM-r2-C0A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZKL-Wx-VpE"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="rzZ-OP-BJd" id="c25-1A-J1w"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhS-aq-ugf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="rzZ-OP-BJd">
+                    <connections>
+                        <outlet property="delegate" destination="41r-m5-MFp" id="mdg-HH-igV"/>
+                        <outlet property="searchBar" destination="qt7-pA-CRM" id="Fbk-gQ-hMv"/>
+                        <outlet property="searchContentsController" destination="41r-m5-MFp" id="5ur-v6-jLV"/>
+                        <outlet property="searchResultsDataSource" destination="41r-m5-MFp" id="XFE-jM-BEU"/>
+                        <outlet property="searchResultsDelegate" destination="41r-m5-MFp" id="uyM-r4-wZa"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1940" y="306"/>
         </scene>
     </scenes>
 </document>

@@ -6,19 +6,11 @@
 //  Copyright (c) 2015 Pandorga. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FFPickerTableViewController.h"
 
-@protocol FFPickerViewControllerDelegate <NSObject>
+@interface FFPickerViewController : FFPickerTableViewController
 
-@optional
-
-- (void)dismissWithData:(id)data;
-
-@end
-
-@interface FFPickerViewController : UITableViewController
-
-@property (nonatomic, assign) id<FFPickerViewControllerDelegate> delegate;
 @property (nonatomic, strong) NSArray *options;
+@property (nonatomic, strong) NSString *headerTitle;
 
 @end

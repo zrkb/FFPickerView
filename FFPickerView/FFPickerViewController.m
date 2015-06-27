@@ -11,10 +11,6 @@
 
 @interface FFPickerViewController ()
 
-@property (nonatomic, assign) NSUInteger selectedIndex;
-@property (nonatomic, strong) id selectedValue;
-@property (nonatomic, strong) id actualValue;
-
 @end
 
 @implementation FFPickerViewController
@@ -22,29 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.selectedIndex = self.selectedIndex ? self.selectedIndex : NSNotFound;
-	
 	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-	[super viewWillAppear:animated];
-	
-	self.actualValue = self.selectedValue;
-}
-
-- (void)willMoveToParentViewController:(UIViewController *)parent {
-	
-	
-	if (![parent isEqual:self.parentViewController]) {
-		if (self.selectedValue && ![self.selectedValue isEqual:self.actualValue] && self.delegate && [self.delegate respondsToSelector:@selector(dismissWithData:)]) {
-			[self.delegate dismissWithData:self.selectedValue];
-		}
-	}
-}
-
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -57,10 +34,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-	
-//	if (cell == nil) {
-//		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-//	}
 	
 	if (self.selectedIndex == indexPath.row) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -115,6 +88,10 @@
 	if ([self.parentViewController isKindOfClass:[UINavigationController class]]){
 		[self.navigationController popViewControllerAnimated:YES];
 	}
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return self.headerTitle;
 }
 
 @end

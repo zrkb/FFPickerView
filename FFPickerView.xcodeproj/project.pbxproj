@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC3907821B39A0C8002E4348 /* CountryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3907811B39A0C8002E4348 /* CountryListTableViewController.m */; };
+		DC3907841B39A356002E4348 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = DC3907831B39A356002E4348 /* countries.json */; };
+		DC3907871B39A404002E4348 /* CountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3907861B39A404002E4348 /* CountryModel.m */; };
+		DC39078A1B39B2F9002E4348 /* FFPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3907891B39B2F9002E4348 /* FFPickerTableViewController.m */; };
 		DCC225221B332C2F00A95CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225211B332C2F00A95CFE /* main.m */; };
 		DCC225251B332C2F00A95CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225241B332C2F00A95CFE /* AppDelegate.m */; };
 		DCC225281B332C2F00A95CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225271B332C2F00A95CFE /* ViewController.m */; };
@@ -17,7 +21,6 @@
 		DCC225471B33481B00A95CFE /* FFPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225461B33481B00A95CFE /* FFPickerViewController.m */; };
 		DCC2254A1B33534C00A95CFE /* FFPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225491B33534C00A95CFE /* FFPicker.m */; };
 		DCC225521B34683000A95CFE /* FFPickerOption.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC225511B34683000A95CFE /* FFPickerOption.m */; };
-		DCC225541B34A10300A95CFE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DCC225531B34A10300A95CFE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC3907801B39A0C8002E4348 /* CountryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryListTableViewController.h; sourceTree = "<group>"; };
+		DC3907811B39A0C8002E4348 /* CountryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryListTableViewController.m; sourceTree = "<group>"; };
+		DC3907831B39A356002E4348 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		DC3907851B39A404002E4348 /* CountryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryModel.h; sourceTree = "<group>"; };
+		DC3907861B39A404002E4348 /* CountryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryModel.m; sourceTree = "<group>"; };
+		DC3907881B39B2F9002E4348 /* FFPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPickerTableViewController.h; sourceTree = "<group>"; };
+		DC3907891B39B2F9002E4348 /* FFPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPickerTableViewController.m; sourceTree = "<group>"; };
 		DCC2251C1B332C2F00A95CFE /* FFPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC225201B332C2F00A95CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC225211B332C2F00A95CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +105,10 @@
 			children = (
 				DCC225231B332C2F00A95CFE /* AppDelegate.h */,
 				DCC225241B332C2F00A95CFE /* AppDelegate.m */,
+				DC3907881B39B2F9002E4348 /* FFPickerTableViewController.h */,
+				DC3907891B39B2F9002E4348 /* FFPickerTableViewController.m */,
+				DC3907801B39A0C8002E4348 /* CountryListTableViewController.h */,
+				DC3907811B39A0C8002E4348 /* CountryListTableViewController.m */,
 				DCC225451B33481B00A95CFE /* FFPickerViewController.h */,
 				DCC225461B33481B00A95CFE /* FFPickerViewController.m */,
 				DCC225501B34683000A95CFE /* FFPickerOption.h */,
@@ -103,6 +117,9 @@
 				DCC225491B33534C00A95CFE /* FFPicker.m */,
 				DCC225261B332C2F00A95CFE /* ViewController.h */,
 				DCC225271B332C2F00A95CFE /* ViewController.m */,
+				DC3907831B39A356002E4348 /* countries.json */,
+				DC3907851B39A404002E4348 /* CountryModel.h */,
+				DC3907861B39A404002E4348 /* CountryModel.m */,
 				DCC225291B332C2F00A95CFE /* Main.storyboard */,
 				DCC2252C1B332C2F00A95CFE /* Images.xcassets */,
 				DCC2252E1B332C2F00A95CFE /* LaunchScreen.xib */,
@@ -219,6 +236,7 @@
 			files = (
 				DCC2252B1B332C2F00A95CFE /* Main.storyboard in Resources */,
 				DCC225301B332C2F00A95CFE /* LaunchScreen.xib in Resources */,
+				DC3907841B39A356002E4348 /* countries.json in Resources */,
 				DCC2252D1B332C2F00A95CFE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,12 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3907821B39A0C8002E4348 /* CountryListTableViewController.m in Sources */,
 				DCC2254A1B33534C00A95CFE /* FFPicker.m in Sources */,
 				DCC225471B33481B00A95CFE /* FFPickerViewController.m in Sources */,
 				DCC225281B332C2F00A95CFE /* ViewController.m in Sources */,
-				DCC225541B34A10300A95CFE /* README.md in Sources */,
+				DC39078A1B39B2F9002E4348 /* FFPickerTableViewController.m in Sources */,
 				DCC225251B332C2F00A95CFE /* AppDelegate.m in Sources */,
 				DCC225521B34683000A95CFE /* FFPickerOption.m in Sources */,
+				DC3907871B39A404002E4348 /* CountryModel.m in Sources */,
 				DCC225221B332C2F00A95CFE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +389,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FFPickerView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -381,7 +402,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FFPickerView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

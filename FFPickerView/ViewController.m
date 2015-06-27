@@ -25,13 +25,15 @@
 													 [FFPickerOption optionWithTitle:@"Bar" value:@"2"],
 													 [FFPickerOption optionWithTitle:@"barz" value:@"3"], nil]];
 	self.picker.delegate = self;
+	self.picker.navigationTitle = @"Options";
+	self.picker.headerTitle = @"Please, select an option";
 }
 
 - (IBAction)showPicker:(id)sender {
-	[self.picker show];
+	[self.picker showWithSegueIdentifier:@"CountryListTableViewController"];
 }
 
-- (void)didSelectOption:(id)option {
+- (void)pickerView:(FFPicker *)pickerView didSelectOption:(id)option {
 	NSLog(@"Option: %@", option);
 }
 

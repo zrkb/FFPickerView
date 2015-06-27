@@ -7,11 +7,14 @@
 //
 
 #import "FFPicker.h"
+#import "FFPickerViewController.h"
 
-@interface FFPicker () <FFPickerViewControllerDelegate>
+@interface FFPicker () <FFPickerTableViewControllerDelegate>
 
 @property (nonatomic, strong) FFPickerViewController *pickerViewController;
 @property (nonatomic, strong) id selectedValue;
+
+@property (nonatomic, strong) FFPickerTableViewController *customPickerController;
 
 @end
 
@@ -40,11 +43,25 @@
 	self.pickerViewController.delegate = self;
 }
 
+- (void)showWithSegueIdentifier:(NSString *)storyboardID {
+	UIViewController *controller = (UIViewController *)self.delegate;
+	
+	if (self.customPickerController == nil) {
+		self.customPickerController = [controller.storyboard instantiateViewControllerWithIdentifier:storyboardID];
+		self.customPickerController.delegate = self;
+	}
+	
+	[controller.navigationController pushViewController:self.customPickerController animated:YES];
+}
+
 - (void)show {
 	
 	if ([self.options count] == 0) return;
 	
 	UIViewController *controller = (UIViewController *)self.delegate;
+	
+	if (self.navigationTitle) self.pickerViewController.title = self.navigationTitle;
+	if (self.headerTitle) self.pickerViewController.headerTitle = self.headerTitle;
 	
 	self.pickerViewController.options = self.options;
 	
@@ -56,8 +73,9 @@
 }
 
 - (void)dismissWithData:(id)data {
-	if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectOption:)]) {
-		[self.delegate didSelectOption:data];
+	self.selectedOption = data;
+	if (self.delegate && [self.delegate respondsToSelector:@selector(pickerView:didSelectOption:)]) {
+		[self.delegate pickerView:self didSelectOption:data];
 	}
 }
 
